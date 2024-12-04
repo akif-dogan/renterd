@@ -41,8 +41,8 @@ require (
 	github.com/ryszard/goskiplist v0.0.0-20150312221310-2dfbae5fcf46 // indirect
 	github.com/shabbyrobe/gocovmerge v0.0.0-20230507112040-c3350d9342df // indirect
 	go.etcd.io/bbolt v1.3.11 // indirect
-	go.sia.tech/core v0.6.2 // indirect
-	go.sia.tech/coreutils v0.7.0 // indirect
+	go.thebigfile.com/core v1.0.1
+	go.thebigfile.com/coreutils v0.0.3
 	go.sia.tech/web v0.0.0-20240610131903-5611d44a533e // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/net v0.30.0 // indirect
