@@ -1,0 +1,272 @@
+package e2e
+
+import (
+	"bytes"
+	"context"
+	"errors"
+	"fmt"
+	"math"
+	"strings"
+	"testing"
+	"time"
+
+	"go.sia.tech/renterd/api"
+	"go.sia.tech/renterd/internal/test"
+	"go.thebigfile.com/core/types"
+	"go.uber.org/zap"
+)
+
+func TestHostPruning(t *testing.T) {
+	if testing.Short() {
+		t.SkipNow()
+	}
+
+	// create a new test cluster
+	cluster := newTestCluster(t, testClusterOptions{hosts: 1})
+	defer cluster.Shutdown()
+
+	// convenience variables
+	b := cluster.Bus
+	a := cluster.Autopilot
+	tt := cluster.tt
+
+	// create a helper function that records n failed interactions
+	now := time.Now()
+	recordFailedInteractions := func(n int, hk types.PublicKey) {
+		t.Helper()
+		his := make([]api.HostScan, n)
+		for i := 0; i < n; i++ {
+			now = now.Add(time.Hour).Add(time.Minute) // 1m leeway
+			his[i] = api.HostScan{
+				HostKey:   hk,
+				Timestamp: now,
+				Success:   false,
+			}
+		}
+		tt.OK(b.RecordHostScans(context.Background(), his))
+	}
+
+	// shut down the worker manually, this will flush any interactions
+	cluster.ShutdownWorker(context.Background())
+
+	// remove it from the cluster manually
+	h1 := cluster.hosts[0]
+	cluster.RemoveHost(h1)
+
+	// record 9 failed interactions, right before the pruning threshold, and
+	// wait for the autopilot loop to finish at least once
+	recordFailedInteractions(9, h1.PublicKey())
+
+	// trigger the autopilot
+	tt.OKAll(a.Trigger(true))
+
+	// assert the host was not pruned
+	hostss, err := b.Hosts(context.Background(), api.GetHostsOptions{})
+	tt.OK(err)
+	if len(hostss) != 1 {
+		t.Fatal("host was pruned")
+	}
+
+	// record one more failed interaction, this should push the host over the
+	// pruning threshold
+	recordFailedInteractions(1, h1.PublicKey())
+
+	// assert the host was pruned
+	tt.Retry(10, time.Second, func() error {
+		hostss, err = b.Hosts(context.Background(), api.GetHostsOptions{})
+		tt.OK(err)
+		if len(hostss) != 0 {
+			a.Trigger(true) // trigger autopilot
+			return fmt.Errorf("host was not pruned, %+v", hostss[0].Interactions)
+		}
+		return nil
+	})
+
+	// assert validation on MaxDowntimeHours
+	ap, err := b.Autopilot(context.Background(), api.DefaultAutopilotID)
+	tt.OK(err)
+
+	ap.Config.Hosts.MaxDowntimeHours = 99*365*24 + 1 // exceed by one
+	if err = b.UpdateAutopilot(context.Background(), api.Autopilot{ID: t.Name(), Config: ap.Config}); !strings.Contains(err.Error(), api.ErrMaxDowntimeHoursTooHigh.Error()) {
+		t.Fatal(err)
+	}
+	ap.Config.Hosts.MaxDowntimeHours = 99 * 365 * 24 // allowed max
+	tt.OK(b.UpdateAutopilot(context.Background(), api.Autopilot{ID: t.Name(), Config: ap.Config}))
+}
+
+func TestSectorPruning(t *testing.T) {
+	if testing.Short() {
+		t.SkipNow()
+	}
+
+	// create a cluster
+	opts := clusterOptsDefault
+	opts.logger = zap.NewNop()
+	cluster := newTestCluster(t, opts)
+	defer cluster.Shutdown()
+
+	// add a helper to check whether a root is in a given slice
+	hasRoot := func(roots []types.Hash256, root types.Hash256) bool {
+		for _, r := range roots {
+			if r == root {
+				return true
+			}
+		}
+		return false
+	}
+
+	// convenience variables
+	cfg := test.AutopilotConfig
+	rs := test.RedundancySettings
+	w := cluster.Worker
+	b := cluster.Bus
+	tt := cluster.tt
+
+	numObjects := 10
+
+	// add hosts
+	hosts := cluster.AddHostsBlocking(rs.TotalShards)
+
+	// wait until we have accounts
+	cluster.WaitForAccounts()
+
+	// wait until we have a contract set
+	cluster.WaitForContractSetContracts(cfg.Contracts.Set, rs.TotalShards)
+
+	// add several objects
+	for i := 0; i < numObjects; i++ {
+		filename := fmt.Sprintf("obj_%d", i)
+		tt.OKAll(w.UploadObject(context.Background(), bytes.NewReader([]byte(filename)), api.DefaultBucketName, filename, api.UploadObjectOptions{}))
+	}
+
+	// shut down the autopilot to prevent it from interfering
+	cluster.ShutdownAutopilot(context.Background())
+
+	// create a contracts dict
+	contracts, err := b.Contracts(context.Background(), api.ContractsOpts{})
+	tt.OK(err)
+
+	// compare database against roots returned by the host
+	var n int
+	for _, c := range contracts {
+		dbRoots, _, err := b.ContractRoots(context.Background(), c.ID)
+		tt.OK(err)
+
+		cRoots, err := cluster.ContractRoots(context.Background(), c.ID)
+		tt.OK(err)
+		if len(dbRoots) != len(cRoots) {
+			t.Fatal("unexpected number of roots", dbRoots, cRoots)
+		}
+		for _, root := range dbRoots {
+			if !hasRoot(cRoots, root) {
+				t.Fatal("missing root", dbRoots, cRoots)
+			}
+		}
+		n += len(cRoots)
+	}
+	if n != rs.TotalShards*numObjects {
+		t.Fatal("unexpected number of roots", n)
+	}
+
+	// sleep to ensure spending records get flushed
+	time.Sleep(3 * testBusFlushInterval)
+
+	// assert prunable data is 0
+	res, err := b.PrunableData(context.Background())
+	tt.OK(err)
+	if res.TotalPrunable != 0 {
+		t.Fatal("expected 0 prunable data", n)
+	}
+
+	// delete every other object
+	for i := 0; i < numObjects; i += 2 {
+		filename := fmt.Sprintf("obj_%d", i)
+		tt.OK(b.DeleteObject(context.Background(), api.DefaultBucketName, filename, api.DeleteObjectOptions{}))
+	}
+
+	// assert amount of prunable data
+	tt.Retry(300, 100*time.Millisecond, func() error {
+		res, err = b.PrunableData(context.Background())
+		tt.OK(err)
+		if res.TotalPrunable != uint64(math.Ceil(float64(numObjects)/2))*rs.SlabSize() {
+			return fmt.Errorf("unexpected prunable data %v", n)
+		}
+		return nil
+	})
+
+	// prune all contracts
+	for _, c := range contracts {
+		res, err := b.PruneContract(context.Background(), c.ID, 0)
+		tt.OK(err)
+		if res.Pruned == 0 {
+			t.Fatal("expected pruned to be non-zero")
+		} else if res.Remaining != 0 {
+			t.Fatal("expected remaining to be zero")
+		}
+	}
+
+	// assert prunable data is 0
+	res, err = b.PrunableData(context.Background())
+	tt.OK(err)
+	if res.TotalPrunable != 0 {
+		t.Fatalf("unexpected prunable data: %d", n)
+	}
+
+	// assert spending was updated
+	for _, c := range contracts {
+		c, err := b.Contract(context.Background(), c.ID)
+		tt.OK(err)
+		if c.Spending.SectorRoots.IsZero() {
+			t.Fatal("spending record not updated")
+		}
+		if c.Spending.Deletions.IsZero() {
+			t.Fatal("spending record not updated")
+		}
+	}
+
+	// delete other object
+	for i := 1; i < numObjects; i += 2 {
+		filename := fmt.Sprintf("obj_%d", i)
+		tt.OK(b.DeleteObject(context.Background(), api.DefaultBucketName, filename, api.DeleteObjectOptions{}))
+	}
+
+	// assert amount of prunable data
+	tt.Retry(300, 100*time.Millisecond, func() error {
+		res, err = b.PrunableData(context.Background())
+		tt.OK(err)
+
+		if len(res.Contracts) != len(contracts) {
+			return fmt.Errorf("expected %d contracts, got %d", len(contracts), len(res.Contracts))
+		} else if res.TotalPrunable == 0 {
+			var sizes []string
+			for _, c := range res.Contracts {
+				res, _ := b.ContractSize(context.Background(), c.ID)
+				sizes = append(sizes, fmt.Sprintf("c: %v size: %v prunable: %v", c.ID, res.Size, res.Prunable))
+			}
+			return errors.New("expected prunable data, contract sizes:\n" + strings.Join(sizes, "\n"))
+		}
+		return nil
+	})
+
+	// update the host settings so it's gouging
+	host := hosts[0]
+	settings := host.settings.Settings()
+	settings.IngressPrice = types.Siacoins(1)
+	settings.EgressPrice = types.Siacoins(1)
+	settings.BaseRPCPrice = types.Siacoins(1)
+	tt.OK(host.UpdateSettings(settings))
+
+	// find the corresponding contract
+	var c api.ContractMetadata
+	for _, c = range contracts {
+		if c.HostKey == host.PublicKey() {
+			break
+		}
+	}
+
+	// prune the contract and assert it threw a gouging error
+	_, err = b.PruneContract(context.Background(), c.ID, 0)
+	if err == nil || !strings.Contains(err.Error(), "gouging") {
+		t.Fatal("expected gouging error", err)
+	}
+}
