@@ -9,7 +9,7 @@ import (
 	"time"
 
 	_ "github.com/mattn/go-sqlite3"
-	"go.sia.tech/renterd/internal/sql"
+	"go.thebigfile.com/renterd/internal/sql"
 	"go.uber.org/zap"
 )
 

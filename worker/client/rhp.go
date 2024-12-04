@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // RHPPriceTable fetches a price table for a host.

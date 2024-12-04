@@ -3,8 +3,8 @@ package contractor
 import (
 	"context"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 func currentPeriodSpending(contracts []api.ContractMetadata, currentPeriod uint64) types.Currency {

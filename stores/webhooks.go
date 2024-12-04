@@ -3,8 +3,8 @@ package stores
 import (
 	"context"
 
-	sql "go.sia.tech/renterd/stores/sql"
-	"go.sia.tech/renterd/webhooks"
+	sql "go.thebigfile.com/renterd/stores/sql"
+	"go.thebigfile.com/renterd/webhooks"
 )
 
 func (s *SQLStore) AddWebhook(ctx context.Context, wh webhooks.Webhook) error {

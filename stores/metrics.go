@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	sql "go.sia.tech/renterd/stores/sql"
+	"go.thebigfile.com/renterd/api"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 func (s *SQLStore) ContractMetrics(ctx context.Context, start time.Time, n uint64, interval time.Duration, opts api.ContractMetricsQueryOpts) (metrics []api.ContractMetric, err error) {

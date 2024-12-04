@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 )
 
 // TestSQLSettingStore tests the bus.SettingStore methods on the SQLSettingStore.

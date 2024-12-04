@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
+	"go.thebigfile.com/renterd/alerts"
 )
 
 var (

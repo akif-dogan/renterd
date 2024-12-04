@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/url"
 
-	"go.sia.tech/renterd/alerts"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
 )
 
 // Alerts fetches the active alerts from the bus.

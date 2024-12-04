@@ -6,13 +6,13 @@ import (
 	"io"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/gouging"
-	rhp3 "go.sia.tech/renterd/internal/rhp/v3"
-	"go.sia.tech/renterd/internal/worker"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/gouging"
+	rhp3 "go.thebigfile.com/renterd/internal/rhp/v3"
+	"go.thebigfile.com/renterd/internal/worker"
 	"go.uber.org/zap"
 )
 

@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	sql "go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 var (

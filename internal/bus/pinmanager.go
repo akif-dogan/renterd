@@ -10,10 +10,10 @@ import (
 
 	"github.com/montanaflynn/stats"
 	"github.com/shopspring/decimal"
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/webhooks"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/webhooks"
 	"go.uber.org/zap"
 )
 

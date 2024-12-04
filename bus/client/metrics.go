@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 func (c *Client) ContractMetrics(ctx context.Context, start time.Time, n uint64, interval time.Duration, opts api.ContractMetricsQueryOpts) ([]api.ContractMetric, error) {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 	"go.uber.org/zap"
 )
 

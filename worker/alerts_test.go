@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.sia.tech/renterd/alerts"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
 )
 
 // TestUploadFailedAlertErrorSet is a test to verify that an upload failing with a HostErrorSet error registers an alert with all the individual errors of any host in the payload.

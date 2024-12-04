@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/test"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/test"
 )
 
 var cfg = api.AutopilotConfig{

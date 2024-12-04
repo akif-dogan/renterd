@@ -9,12 +9,12 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.sia.tech/renterd/api"
-	sql "go.sia.tech/renterd/stores/sql"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/chain"
+	"go.thebigfile.com/renterd/api"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 // TestSQLHostDB tests the basic functionality of SQLHostDB using an in-memory

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 )
 
 // AbortMultipartUpload aborts a multipart upload.

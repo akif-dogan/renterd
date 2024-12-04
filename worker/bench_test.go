@@ -6,8 +6,8 @@ import (
 	"io"
 	"testing"
 
-	"go.sia.tech/renterd/api"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
+	"go.thebigfile.com/renterd/api"
 	"lukechampine.com/frand"
 )
 

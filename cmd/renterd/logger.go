@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.sia.tech/renterd/config"
+	"go.thebigfile.com/renterd/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

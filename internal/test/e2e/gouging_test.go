@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/test"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/test"
 	"lukechampine.com/frand"
 )
 

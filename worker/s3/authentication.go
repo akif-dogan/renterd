@@ -8,8 +8,8 @@ import (
 
 	"go.sia.tech/gofakes3"
 	"go.sia.tech/gofakes3/signature"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 var (

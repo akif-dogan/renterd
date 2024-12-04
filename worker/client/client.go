@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"go.sia.tech/jape"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
-	"go.sia.tech/renterd/object"
-	"go.sia.tech/renterd/webhooks"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
+	"go.thebigfile.com/renterd/object"
+	"go.thebigfile.com/renterd/webhooks"
 )
 
 // A Client provides methods for interacting with a worker.

@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/api"
 	"go.uber.org/zap"
 )
 

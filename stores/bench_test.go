@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	isql "go.sia.tech/renterd/internal/sql"
-	"go.sia.tech/renterd/object"
-	"go.sia.tech/renterd/stores/sql"
-	"go.sia.tech/renterd/stores/sql/sqlite"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	isql "go.thebigfile.com/renterd/internal/sql"
+	"go.thebigfile.com/renterd/object"
+	"go.thebigfile.com/renterd/stores/sql"
+	"go.thebigfile.com/renterd/stores/sql/sqlite"
 	"go.uber.org/zap"
 
 	"lukechampine.com/frand"

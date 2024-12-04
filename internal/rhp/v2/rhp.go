@@ -11,11 +11,11 @@ import (
 	"sort"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/gouging"
-	"go.sia.tech/renterd/internal/utils"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/gouging"
+	"go.thebigfile.com/renterd/internal/utils"
 	"go.uber.org/zap"
 	"lukechampine.com/frand"
 )

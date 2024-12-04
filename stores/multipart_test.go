@@ -11,9 +11,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/klauspost/reedsolomon"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 	"lukechampine.com/frand"
 )
 

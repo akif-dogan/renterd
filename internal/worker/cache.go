@@ -12,8 +12,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/webhooks"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/webhooks"
 )
 
 const (

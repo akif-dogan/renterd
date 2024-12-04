@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/object"
-	"go.sia.tech/renterd/webhooks"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/object"
+	"go.thebigfile.com/renterd/webhooks"
 	"lukechampine.com/frand"
 )
 

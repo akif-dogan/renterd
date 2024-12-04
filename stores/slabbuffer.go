@@ -11,12 +11,12 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
-	sql "go.sia.tech/renterd/stores/sql"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
+	sql "go.thebigfile.com/renterd/stores/sql"
 	"go.uber.org/zap"
 	"lukechampine.com/frand"
 )

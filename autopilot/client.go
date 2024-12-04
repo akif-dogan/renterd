@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"go.sia.tech/jape"
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // A Client provides methods for interacting with an autopilot.

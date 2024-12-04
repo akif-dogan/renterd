@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 	"go.uber.org/zap"
 )
 

@@ -3,8 +3,8 @@ package client
 import (
 	"context"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/webhooks"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/webhooks"
 )
 
 // BroadcastAction broadcasts an action that triggers a webhook.

@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/gabriel-vasile/mimetype"
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/object"
 )
 
 func encryptPartialSlab(data []byte, key object.EncryptionKey, minShards, totalShards uint8) [][]byte {

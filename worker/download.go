@@ -10,12 +10,12 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	rhp3 "go.sia.tech/renterd/internal/rhp/v3"
-	"go.sia.tech/renterd/internal/utils"
-	"go.sia.tech/renterd/object"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	rhp3 "go.thebigfile.com/renterd/internal/rhp/v3"
+	"go.thebigfile.com/renterd/internal/utils"
+	"go.thebigfile.com/renterd/object"
 	"go.uber.org/zap"
 )
 

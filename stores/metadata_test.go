@@ -15,14 +15,14 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/config"
-	isql "go.sia.tech/renterd/internal/sql"
-	"go.sia.tech/renterd/internal/test"
-	"go.sia.tech/renterd/object"
-	sql "go.sia.tech/renterd/stores/sql"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/config"
+	isql "go.thebigfile.com/renterd/internal/sql"
+	"go.thebigfile.com/renterd/internal/test"
+	"go.thebigfile.com/renterd/object"
+	sql "go.thebigfile.com/renterd/stores/sql"
 	"lukechampine.com/frand"
 )
 

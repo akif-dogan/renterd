@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/coreutils/syncer"
+	"go.thebigfile.com/renterd/stores/sql"
 )
 
 var (

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sort"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
-	sql "go.sia.tech/renterd/stores/sql"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 func (s *SQLStore) CreateMultipartUpload(ctx context.Context, bucket, path string, ec object.EncryptionKey, mimeType string, metadata api.ObjectUserMetadata) (api.MultipartCreateResponse, error) {

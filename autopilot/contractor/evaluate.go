@@ -3,9 +3,9 @@ package contractor
 import (
 	"errors"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/gouging"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/gouging"
 )
 
 var ErrMissingRequiredFields = errors.New("missing required fields in configuration, both allowance and amount must be set")

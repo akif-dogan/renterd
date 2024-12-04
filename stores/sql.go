@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/stores/sql"
 	"go.uber.org/zap"
 )
 

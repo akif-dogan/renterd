@@ -4,8 +4,8 @@ import (
 	"math"
 	"testing"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 	"lukechampine.com/frand"
 )
 

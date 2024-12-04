@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 )
 
 // Autopilot returns the autopilot with the given ID.

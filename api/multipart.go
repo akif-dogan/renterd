@@ -3,7 +3,7 @@ package api
 import (
 	"errors"
 
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/object"
 )
 
 var (

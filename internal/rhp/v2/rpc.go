@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"go.sia.tech/renterd/internal/utils"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 // rpcFormContract forms a contract with a host.

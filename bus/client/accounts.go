@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/url"
 
-	"go.sia.tech/renterd/api"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // Accounts returns all accounts.

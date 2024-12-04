@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
 	"lukechampine.com/frand"
 )
 

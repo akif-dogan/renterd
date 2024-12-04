@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/test"
-	"go.sia.tech/renterd/webhooks"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/test"
+	"go.thebigfile.com/renterd/webhooks"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zaptest/observer"

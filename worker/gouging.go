@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/gouging"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/gouging"
 )
 
 const (

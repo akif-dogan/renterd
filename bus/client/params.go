@@ -3,7 +3,7 @@ package client
 import (
 	"context"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 )
 
 // GougingParams returns parameters used for performing gouging checks.

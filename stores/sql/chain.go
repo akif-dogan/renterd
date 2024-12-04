@@ -6,10 +6,10 @@ import (
 	"errors"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/sql"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/sql"
 	"go.uber.org/zap"
 )
 

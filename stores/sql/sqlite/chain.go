@@ -11,12 +11,12 @@ import (
 
 	dsql "database/sql"
 
-	"go.sia.tech/renterd/api"
-	isql "go.sia.tech/renterd/internal/sql"
-	ssql "go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/chain"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/api"
+	isql "go.thebigfile.com/renterd/internal/sql"
+	ssql "go.thebigfile.com/renterd/stores/sql"
 	"go.uber.org/zap"
 )
 

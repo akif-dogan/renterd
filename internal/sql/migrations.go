@@ -7,8 +7,8 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"go.sia.tech/renterd/internal/utils"
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/internal/utils"
+	"go.thebigfile.com/renterd/object"
 	"go.uber.org/zap"
 )
 

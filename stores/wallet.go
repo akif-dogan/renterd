@@ -3,9 +3,9 @@ package stores
 import (
 	"context"
 
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/stores/sql"
 )
 
 var (

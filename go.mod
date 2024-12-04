@@ -1,4 +1,4 @@
-module go.sia.tech/renterd
+module go.thebigfile.com/renterd
 
 go 1.23.1
 
@@ -15,7 +15,7 @@ require (
 	github.com/montanaflynn/stats v0.7.1
 	github.com/shopspring/decimal v1.4.0
 	go.thebigfile.com/core v1.0.1
-	go.thebigfile.com/coreutils v0.0.1
+	go.thebigfile.com/coreutils v0.0.3
 	go.sia.tech/gofakes3 v0.0.5
 	go.sia.tech/hostd v1.1.3-0.20241118221702-bd91bb9688a2
 	go.sia.tech/jape v0.12.1

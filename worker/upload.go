@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
-	"go.sia.tech/renterd/object"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
+	"go.thebigfile.com/renterd/object"
 	"go.uber.org/zap"
 )
 

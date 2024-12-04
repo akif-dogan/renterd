@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/object"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/object"
 )
 
 var (

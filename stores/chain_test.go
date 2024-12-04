@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/chain"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/stores/sql"
 )
 
 // TestProcessChainUpdate tests the ProcessChainUpdate method on the SQL store.

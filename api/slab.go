@@ -1,8 +1,8 @@
 package api
 
 import (
-	"go.sia.tech/renterd/object"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/object"
 )
 
 type (

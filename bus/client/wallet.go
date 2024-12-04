@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // SendSiacoins is a helper method that sends siacoins to the given address.

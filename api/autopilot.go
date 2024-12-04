@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"go.sia.tech/renterd/internal/utils"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 const (

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"go.sia.tech/jape"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 // A Client provides methods for interacting with a bus.

@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // AddContract adds the provided contract to the metadata store.

@@ -4,10 +4,10 @@ import (
 	"math"
 	"testing"
 
-	"go.sia.tech/renterd/api"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 func TestMinRemainingCollateral(t *testing.T) {

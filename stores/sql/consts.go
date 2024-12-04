@@ -3,7 +3,7 @@ package sql
 import (
 	"strings"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 )
 
 type ContractState uint8

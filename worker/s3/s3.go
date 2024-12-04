@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"go.sia.tech/gofakes3"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 	"go.uber.org/zap"
 )
 

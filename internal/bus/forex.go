@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"go.sia.tech/renterd/internal/utils"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 type (

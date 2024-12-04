@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
+	"go.thebigfile.com/renterd/api"
 )
 
 // Bucket returns information about a specific bucket.

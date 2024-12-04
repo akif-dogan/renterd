@@ -5,9 +5,9 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 const (

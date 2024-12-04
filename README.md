@@ -1,5 +1,5 @@
 # [![Sia](https://sia.tech/assets/banners/sia-banner-expanded-renterd.png)](http://sia.tech)
-[![GoDoc](https://godoc.org/go.sia.tech/renterd?status.svg)](https://godoc.org/go.sia.tech/renterd)
+[![GoDoc](https://godoc.org/go.thebigfile.com/renterd?status.svg)](https://godoc.org/go.thebigfile.com/renterd)
 
 
 `renterd` is an advanced Sia renter engineered by the Sia Foundation. Designed

@@ -3,8 +3,8 @@ package stores
 import (
 	"context"
 
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/stores/sql"
 )
 
 // ChainIndex returns the last stored chain index.

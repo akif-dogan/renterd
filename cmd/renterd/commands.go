@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"go.sia.tech/renterd/build"
-	"go.sia.tech/renterd/config"
 	"go.thebigfile.com/core/types"
 	"go.thebigfile.com/coreutils/wallet"
+	"go.thebigfile.com/renterd/build"
+	"go.thebigfile.com/renterd/config"
 	"gopkg.in/yaml.v3"
 )
 

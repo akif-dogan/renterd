@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	rhp3 "go.sia.tech/renterd/internal/rhp/v3"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
+	rhp3 "go.thebigfile.com/renterd/internal/rhp/v3"
 )
 
 func TestUploaderStopped(t *testing.T) {

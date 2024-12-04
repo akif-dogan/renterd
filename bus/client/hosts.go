@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"time"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // Host returns information about a particular host known to the server.

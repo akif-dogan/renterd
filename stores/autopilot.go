@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"go.sia.tech/renterd/api"
-	sql "go.sia.tech/renterd/stores/sql"
+	"go.thebigfile.com/renterd/api"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 func (s *SQLStore) Autopilots(ctx context.Context) (aps []api.Autopilot, _ error) {

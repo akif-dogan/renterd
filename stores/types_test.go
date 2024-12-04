@@ -6,8 +6,8 @@ import (
 	"sort"
 	"testing"
 
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/stores/sql"
 )
 
 func TestTypeCurrency(t *testing.T) {

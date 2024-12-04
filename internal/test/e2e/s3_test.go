@@ -17,9 +17,9 @@ import (
 	s3aws "github.com/aws/aws-sdk-go/service/s3"
 	"github.com/google/go-cmp/cmp"
 	"go.sia.tech/gofakes3"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/test"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/test"
 	"lukechampine.com/frand"
 )
 

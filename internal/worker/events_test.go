@@ -12,11 +12,11 @@ import (
 	"time"
 
 	"go.sia.tech/jape"
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/utils"
-	"go.sia.tech/renterd/webhooks"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/utils"
+	"go.thebigfile.com/renterd/webhooks"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zaptest/observer"
 )

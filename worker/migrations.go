@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 )
 
 func (w *Worker) migrate(ctx context.Context, s object.Slab, contractSet string, dlContracts, ulContracts []api.ContractMetadata, bh uint64) (int, bool, error) {

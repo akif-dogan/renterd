@@ -3,9 +3,9 @@ package contractor
 import (
 	"time"
 
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/api"
 )
 
 const (

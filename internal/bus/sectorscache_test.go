@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"go.sia.tech/renterd/api"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 	"lukechampine.com/frand"
 )
 

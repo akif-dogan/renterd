@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/object"
 )
 
 const (

@@ -1,8 +1,8 @@
 package worker
 
 import (
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 )
 
 type uploadParameters struct {

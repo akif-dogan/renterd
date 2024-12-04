@@ -8,10 +8,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	rhp3 "go.sia.tech/renterd/internal/rhp/v3"
-	"go.sia.tech/renterd/internal/utils"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	"go.thebigfile.com/core/types"
+	rhp3 "go.thebigfile.com/renterd/internal/rhp/v3"
+	"go.thebigfile.com/renterd/internal/utils"
 )
 
 const (

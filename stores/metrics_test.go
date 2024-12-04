@@ -9,9 +9,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/stores/sql"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/stores/sql"
 	"lukechampine.com/frand"
 )
 

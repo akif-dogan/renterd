@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"go.sia.tech/renterd/api"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
 )
 
 // AddUploadingSector adds the given sector to the upload with given id.

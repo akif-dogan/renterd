@@ -9,14 +9,14 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/alerts"
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/internal/gouging"
-	"go.sia.tech/renterd/object"
-	"go.sia.tech/renterd/webhooks"
 	rhpv2 "go.thebigfile.com/core/rhp/v2"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/alerts"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/internal/gouging"
+	"go.thebigfile.com/renterd/object"
+	"go.thebigfile.com/renterd/webhooks"
 )
 
 type accountsMock struct{}

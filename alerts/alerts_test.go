@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"go.sia.tech/renterd/webhooks"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/webhooks"
 	"go.uber.org/zap"
 )
 

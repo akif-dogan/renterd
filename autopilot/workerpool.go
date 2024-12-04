@@ -5,10 +5,10 @@ import (
 	"sync"
 	"time"
 
-	"go.sia.tech/renterd/api"
-	"go.sia.tech/renterd/object"
 	rhpv3 "go.thebigfile.com/core/rhp/v3"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/renterd/api"
+	"go.thebigfile.com/renterd/object"
 	"lukechampine.com/frand"
 )
 

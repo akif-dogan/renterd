@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	sql "go.sia.tech/renterd/stores/sql"
+	sql "go.thebigfile.com/renterd/stores/sql"
 )
 
 // DeleteSetting implements the bus.SettingStore interface.
