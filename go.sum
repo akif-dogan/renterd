@@ -55,10 +55,10 @@ github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsT
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 go.etcd.io/bbolt v1.3.11 h1:yGEzV1wPz2yVCLsD8ZAiGHhHVlczyC9d1rP43/VCRJ0=
 go.etcd.io/bbolt v1.3.11/go.mod h1:dksAq7YMXoljX0xu6VF5DMZGbhYYoLUalEiSySYAS4I=
-go.thebigfile.com/core v0.6.2 h1:8NEjxyD93A+EhZopsBy/LvuHH+zUSjRNKnf9rXgtIwU=
-go.thebigfile.com/core v0.6.2/go.mod h1:4v+aT/33857tMfqa5j5OYlAoLsoIrd4d7qMlgeP+VGk=
-go.thebigfile.com/coreutils v0.7.0 h1:YpgOUD4vrpDz0KC7FJz+UCOaKaqV5EkX3gMUUmJoz5s=
-go.thebigfile.com/coreutils v0.7.0/go.mod h1:eMoqzqO4opKQ6n9tTTxHQmccfNlj+8RFOYuDSL/Qd4g=
+go.sia.tech/core v0.6.2 h1:8NEjxyD93A+EhZopsBy/LvuHH+zUSjRNKnf9rXgtIwU=
+go.sia.tech/core v0.6.2/go.mod h1:4v+aT/33857tMfqa5j5OYlAoLsoIrd4d7qMlgeP+VGk=
+go.sia.tech/coreutils v0.7.0 h1:YpgOUD4vrpDz0KC7FJz+UCOaKaqV5EkX3gMUUmJoz5s=
+go.sia.tech/coreutils v0.7.0/go.mod h1:eMoqzqO4opKQ6n9tTTxHQmccfNlj+8RFOYuDSL/Qd4g=
 go.sia.tech/gofakes3 v0.0.5 h1:vFhVBUFbKE9ZplvLE2w4TQxFMQyF8qvgxV4TaTph+Vw=
 go.sia.tech/gofakes3 v0.0.5/go.mod h1:LXEzwGw+OHysWLmagleCttX93cJZlT9rBu/icOZjQ54=
 go.sia.tech/hostd v1.1.3-0.20241118221702-bd91bb9688a2 h1:pPv9+cvE9Vf+yiAEBcvhmdYM9lXu0z621sjxOrnx0yQ=
@@ -71,6 +71,10 @@ go.sia.tech/web v0.0.0-20240610131903-5611d44a533e h1:oKDz6rUExM4a4o6n/EXDppsEka
 go.sia.tech/web v0.0.0-20240610131903-5611d44a533e/go.mod h1:4nyDlycPKxTlCqvOeRO0wUfXxyzWCEE7+2BRrdNqvWk=
 go.sia.tech/web/renterd v0.61.0 h1:DmSGkpbaqodKvP4Mn79lLeZF2xqcWFQRrT2xPuLf8Uo=
 go.sia.tech/web/renterd v0.61.0/go.mod h1:VWfvYtmdJGfrqSoNRO3NoOjUij+RB/xNO4M0HqIf1+M=
+go.thebigfile.com/core v1.0.1 h1:k2/b9cX5PirpJTIABNaLFUQiUDTgf3ztZuNfeaBY0DY=
+go.thebigfile.com/core v1.0.1/go.mod h1:GvtqzNCh9tjZPSqhRu9eMvjObKVX4mqGlIuR2gZa72U=
+go.thebigfile.com/coreutils v0.0.3 h1:rIDkRfAWM9Dkx2ZkHXJMZwZlVj7oza5E6hfIhRgzOGE=
+go.thebigfile.com/coreutils v0.0.3/go.mod h1:2RmulPYiddTbdDD4j3fs/3bp+owz1tQLu7mS0RLM5l0=
 go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
 go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
 go.uber.org/multierr v1.11.0 h1:blXXJkSxSSfBVBlC76pxqeO+LN3aDfLQo+309xJstO0=
