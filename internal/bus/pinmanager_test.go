@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/shopspring/decimal"
-	"go.sia.tech/hostd/host/settings/pin"
 	"go.thebigfile.com/core/types"
+	"go.thebigfile.com/hostd/host/settings/pin"
 	"go.thebigfile.com/renterd/alerts"
 	"go.thebigfile.com/renterd/api"
 	"go.thebigfile.com/renterd/webhooks"
