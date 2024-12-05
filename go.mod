@@ -15,12 +15,12 @@ require (
 	github.com/montanaflynn/stats v0.7.1
 	github.com/shopspring/decimal v1.4.0
 	go.sia.tech/gofakes3 v0.0.5
-	go.thebigfile.com/hostd v0.0.1
 	go.sia.tech/jape v0.12.1
 	go.sia.tech/mux v1.3.0
 	go.sia.tech/web/renterd v0.61.0
 	go.thebigfile.com/core v1.0.1
 	go.thebigfile.com/coreutils v0.0.3
+	go.thebigfile.com/hostd v0.0.1
 	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.29.0
 	golang.org/x/sys v0.27.0
@@ -31,7 +31,7 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
-	github.com/cloudflare/cloudflare-go v0.109.0 // indirect
+	github.com/cloudflare/cloudflare-go v0.110.0 // indirect
 	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
@@ -41,13 +41,10 @@ require (
 	github.com/ryszard/goskiplist v0.0.0-20150312221310-2dfbae5fcf46 // indirect
 	github.com/shabbyrobe/gocovmerge v0.0.0-20230507112040-c3350d9342df // indirect
 	go.etcd.io/bbolt v1.3.11 // indirect
-	go.thebigfile.com/core v1.0.1
-	go.thebigfile.com/coreutils v0.0.3
 	go.sia.tech/web v0.0.0-20240610131903-5611d44a533e // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	golang.org/x/net v0.30.0 // indirect
+	golang.org/x/net v0.31.0 // indirect
 	golang.org/x/text v0.20.0 // indirect
 	golang.org/x/time v0.8.0 // indirect
 	golang.org/x/tools v0.23.0 // indirect
-	nhooyr.io/websocket v1.8.17 // indirect
 )
